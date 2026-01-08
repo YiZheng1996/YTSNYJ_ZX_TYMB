@@ -9,8 +9,10 @@ namespace MainUI
         public frmLogin()
         {
             InitializeComponent();
+            InitializeLoginConfig();
         }
         ucFinger finger = new();
+        private LoginConfig loginConfig;
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -172,6 +174,10 @@ namespace MainUI
                     finger.bIsTimeToDie = true; // 停止登录扫描指纹线程
                     NewUsers.NewUserInfo.InitUser(user);
                     EventLogHelper.Log(EventLogType.Normal, "工号" + NewUsers.NewUserInfo.JobNumber + "登录。");
+
+                    // 登录成功后保存登录配置
+                    SaveLoginConfig();
+
                     DialogResult = DialogResult.OK;
                     Close();
                     finger.CloseFinger();
@@ -190,6 +196,110 @@ namespace MainUI
             frmAuthentication frm = new();
             frm.ShowDialog();
         }
+
+        #region 记住密码
+
+        /// <summary>
+        /// 初始化登录配置 - 加载保存的账号密码
+        /// </summary>
+        private void InitializeLoginConfig()
+        {
+            try
+            {
+                loginConfig = new LoginConfig();
+
+                // 如果启用了记住密码功能
+                if (loginConfig.RememberPassword != "1") return;
+                chkRememberPassword.Checked = true;
+
+                // 自动填充工号
+                if (!string.IsNullOrEmpty(loginConfig.SavedJobNumber))
+                {
+                    txtJobNumber.Text = loginConfig.SavedJobNumber;
+                }
+
+                // 自动填充密码
+                if (!string.IsNullOrEmpty(loginConfig.SavedPassword))
+                {
+                    txtPassword.Text = DecryptPassword(loginConfig.SavedPassword);
+                }
+            }
+            catch (Exception ex)
+            {
+                NlogHelper.Default.Error("加载登录配置失败：", ex);
+            }
+        }
+
+        /// <summary>
+        /// 保存登录配置
+        /// </summary>
+        private void SaveLoginConfig()
+        {
+            try
+            {
+                loginConfig = new LoginConfig();
+
+                if (chkRememberPassword.Checked)
+                {
+                    loginConfig.RememberPassword = "1";
+                    loginConfig.SavedJobNumber = txtJobNumber.Text.Trim();
+                    loginConfig.SavedPassword = EncryptPassword(txtPassword.Text.Trim());
+                }
+                else
+                {
+                    // 不记住密码时清空保存的信息
+                    loginConfig.RememberPassword = "0";
+                    loginConfig.SavedJobNumber = "";
+                    loginConfig.SavedPassword = "";
+                }
+
+                loginConfig.Save();
+            }
+            catch (Exception ex)
+            {
+                NlogHelper.Default.Error("保存登录配置失败：", ex);
+            }
+        }
+
+        /// <summary>
+        /// 简单加密密码（使用Base64）
+        /// </summary>
+        private string EncryptPassword(string password)
+        {
+            if (string.IsNullOrEmpty(password))
+                return string.Empty;
+
+            try
+            {
+                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(password);
+                return Convert.ToBase64String(bytes);
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        /// <summary>
+        /// 解密密码
+        /// </summary>
+        private string DecryptPassword(string encryptedPassword)
+        {
+            if (string.IsNullOrEmpty(encryptedPassword))
+                return string.Empty;
+
+            try
+            {
+                byte[] bytes = Convert.FromBase64String(encryptedPassword);
+                return System.Text.Encoding.UTF8.GetString(bytes);
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        #endregion
 
     }
 }

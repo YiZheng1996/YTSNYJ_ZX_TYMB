@@ -2,8 +2,6 @@
 using MainUI.Equip;
 using MainUI.TaskInformation;
 using System.Net;
-using System.Net.Http;
-using System.Security.Policy;
 
 namespace MainUI
 {
@@ -144,6 +142,8 @@ namespace MainUI
         {
             if (dicAI.TryGetValue(index, out UIDigitalLabel Divalue))
                 Divalue.Value = value;
+
+
             BtnColor(btnOnline, btnOffline, VarHelper.TaskModel);
         }
         private void AOgrp_AOvalueGrpChanged(object sender, int index, double value)
@@ -167,6 +167,7 @@ namespace MainUI
                     break;
             }
         }
+
         //DI模块事件
         private async void DIgrp_DIGroupChanged(object sender, int index, bool value)
         {

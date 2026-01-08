@@ -83,7 +83,7 @@ namespace MainUI.CurrencyHelper
         /// <summary>
         /// SHA512加密
         /// </summary>
-        /// <param name="salt">头</param>
+        /// <param name="salt">头，工号</param>
         /// <param name="password">密码</param>
         /// <returns></returns>
         public static string SHA512Encoding(string salt, string password)

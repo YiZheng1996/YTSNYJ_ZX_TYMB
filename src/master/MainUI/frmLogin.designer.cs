@@ -37,6 +37,7 @@
             uiPanel1 = new UIPanel();
             txtPassword = new UITextBox();
             txtJobNumber = new UITextBox();
+            chkRememberPassword = new UICheckBox();
             btnAuthentication = new UISymbolButton();
             btnExit = new UISymbolButton();
             btnSignIn = new UISymbolButton();
@@ -82,6 +83,7 @@
             // 
             uiPanel1.Controls.Add(txtPassword);
             uiPanel1.Controls.Add(txtJobNumber);
+            uiPanel1.Controls.Add(chkRememberPassword);
             uiPanel1.Controls.Add(btnAuthentication);
             uiPanel1.Controls.Add(btnExit);
             uiPanel1.Controls.Add(btnSignIn);
@@ -135,6 +137,14 @@
             txtJobNumber.ShowText = false;
             txtJobNumber.TextAlignment = ContentAlignment.MiddleLeft;
             txtJobNumber.Watermark = "请输入工号";
+            // 
+            // chkRememberPassword
+            // 
+            chkRememberPassword.BackColor = Color.Transparent;
+            chkRememberPassword.CheckBoxColor = Color.FromArgb(239, 154, 78);
+            resources.ApplyResources(chkRememberPassword, "chkRememberPassword");
+            chkRememberPassword.ForeColor = Color.FromArgb(235, 227, 221);
+            chkRememberPassword.Name = "chkRememberPassword";
             // 
             // btnAuthentication
             // 
@@ -213,5 +223,6 @@
         private UISymbolButton btnExit;
         private UISymbolButton btnAuthentication;
         private UITextBox txtJobNumber;
+        private UICheckBox chkRememberPassword;
     }
 }

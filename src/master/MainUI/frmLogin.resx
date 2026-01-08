@@ -181,7 +181,7 @@
     <value>uiPanel1</value>
   </data>
   <data name="&gt;&gt;lblMessage.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="uiLabel3.Font" type="System.Drawing.Font, System.Drawing">
     <value>思源黑体 CN Bold, 13pt, style=Bold</value>
@@ -214,7 +214,7 @@
     <value>uiPanel1</value>
   </data>
   <data name="&gt;&gt;uiLabel3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="uiLabel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>思源黑体 CN Bold, 13pt, style=Bold</value>
@@ -247,7 +247,7 @@
     <value>uiPanel1</value>
   </data>
   <data name="&gt;&gt;uiLabel1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -355,7 +355,7 @@
     <value>uiPanel1</value>
   </data>
   <data name="&gt;&gt;Logo.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txtPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>思源黑体 CN Bold, 13pt, style=Bold</value>
@@ -424,6 +424,36 @@
   <data name="&gt;&gt;txtJobNumber.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="chkRememberPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>思源黑体 CN Bold, 11pt, style=Bold</value>
+  </data>
+  <data name="chkRememberPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 148</value>
+  </data>
+  <data name="chkRememberPassword.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="chkRememberPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="chkRememberPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkRememberPassword.Text" xml:space="preserve">
+    <value>记住密码</value>
+  </data>
+  <data name="&gt;&gt;chkRememberPassword.Name" xml:space="preserve">
+    <value>chkRememberPassword</value>
+  </data>
+  <data name="&gt;&gt;chkRememberPassword.Type" xml:space="preserve">
+    <value>Sunny.UI.UICheckBox, SunnyUI, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;chkRememberPassword.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;chkRememberPassword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btnAuthentication.Font" type="System.Drawing.Font, System.Drawing">
     <value>思源黑体 CN Bold, 13pt, style=Bold</value>
   </data>
@@ -452,13 +482,13 @@
     <value>uiPanel1</value>
   </data>
   <data name="&gt;&gt;btnAuthentication.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnExit.Font" type="System.Drawing.Font, System.Drawing">
     <value>思源黑体 CN Bold, 13pt, style=Bold</value>
   </data>
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 171</value>
+    <value>344, 191</value>
   </data>
   <data name="btnExit.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1, 1</value>
@@ -482,13 +512,13 @@
     <value>uiPanel1</value>
   </data>
   <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnSignIn.Font" type="System.Drawing.Font, System.Drawing">
     <value>思源黑体 CN Bold, 13pt, style=Bold</value>
   </data>
   <data name="btnSignIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 171</value>
+    <value>151, 191</value>
   </data>
   <data name="btnSignIn.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1, 1</value>
@@ -512,7 +542,7 @@
     <value>uiPanel1</value>
   </data>
   <data name="&gt;&gt;btnSignIn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="uiPanel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 12pt</value>
@@ -527,7 +557,7 @@
     <value>1, 1</value>
   </data>
   <data name="uiPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>610, 235</value>
+    <value>610, 248</value>
   </data>
   <data name="uiPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>118</value>
