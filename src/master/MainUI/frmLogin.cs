@@ -1,6 +1,7 @@
 ﻿using MainUI.CurrencyHelper;
 using MainUI.TaskInformation;
 using RW.EventLog;
+using System.Text.RegularExpressions;
 
 namespace MainUI
 {

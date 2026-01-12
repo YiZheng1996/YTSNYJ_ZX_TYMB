@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             uiPanel1 = new UIPanel();
-            ComMutualPerson = new AntdUI.Select();
+            ComMutualPerson = new UIComboBox();
             btnOK = new UIButton();
             uiLabel1 = new UILabel();
             txtauxiliariesName4 = new UITextBox();
@@ -104,20 +104,27 @@
             // 
             // ComMutualPerson
             // 
-            ComMutualPerson.BackColor = Color.FromArgb(42, 47, 55);
-            ComMutualPerson.Font = new Font("Microsoft YaHei UI", 13F);
+            ComMutualPerson.BackColor = Color.Transparent;
+            ComMutualPerson.DataSource = null;
+            ComMutualPerson.FillColor = Color.FromArgb(43, 46, 57);
+            ComMutualPerson.FillColor2 = Color.FromArgb(43, 46, 57);
+            ComMutualPerson.Font = new Font("思源黑体 CN Bold", 12F, FontStyle.Bold);
             ComMutualPerson.ForeColor = Color.FromArgb(235, 227, 221);
-            ComMutualPerson.List = true;
+            ComMutualPerson.ForeDisableColor = Color.FromArgb(235, 227, 221);
+            ComMutualPerson.ItemHoverColor = Color.FromArgb(155, 200, 255);
+            ComMutualPerson.ItemSelectForeColor = Color.FromArgb(235, 243, 255);
             ComMutualPerson.Location = new Point(21, 51);
-            ComMutualPerson.MaxCount = 10;
+            ComMutualPerson.Margin = new Padding(4, 5, 4, 5);
+            ComMutualPerson.MinimumSize = new Size(63, 0);
             ComMutualPerson.Name = "ComMutualPerson";
-            ComMutualPerson.PlaceholderText = "--请选择--";
-            ComMutualPerson.Radius = 0;
-            ComMutualPerson.SelectionColor = Color.FromArgb(239, 154, 78);
-            ComMutualPerson.Size = new Size(197, 35);
-            ComMutualPerson.TabIndex = 452;
-            ComMutualPerson.Text = "--请选择--";
-            ComMutualPerson.TextAlign = HorizontalAlignment.Center;
+            ComMutualPerson.Padding = new Padding(0, 0, 30, 2);
+            ComMutualPerson.RectColor = Color.Silver;
+            ComMutualPerson.RectDisableColor = Color.Silver;
+            ComMutualPerson.Size = new Size(197, 30);
+            ComMutualPerson.SymbolSize = 24;
+            ComMutualPerson.TabIndex = 453;
+            ComMutualPerson.TextAlignment = ContentAlignment.MiddleLeft;
+            ComMutualPerson.Watermark = "请选择";
             ComMutualPerson.SelectedIndexChanged += ComMutualPerson_SelectedIndexChanged;
             // 
             // btnOK
@@ -548,6 +555,7 @@
             MinimizeBox = false;
             Name = "frmUserSelection";
             RectColor = Color.FromArgb(47, 55, 64);
+            ShowIcon = false;
             Text = "人员选择";
             TitleColor = Color.FromArgb(47, 55, 64);
             TitleFont = new Font("思源黑体 CN Heavy", 15F, FontStyle.Bold);
@@ -583,6 +591,6 @@
         private UITextBox txtauxiliariesCode1;
         private UILabel uiLabel8;
         private UIButton btnOK;
-        private AntdUI.Select ComMutualPerson;
+        private UIComboBox ComMutualPerson;
     }
 }
