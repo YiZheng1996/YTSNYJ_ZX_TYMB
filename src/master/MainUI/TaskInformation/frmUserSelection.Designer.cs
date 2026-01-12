@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             uiPanel1 = new UIPanel();
-            ComMutualPerson = new UIComboBox();
+            txtMutualPerson = new UITextBox();
             btnOK = new UIButton();
             uiLabel1 = new UILabel();
             txtauxiliariesName4 = new UITextBox();
@@ -59,7 +59,7 @@
             // 
             // uiPanel1
             // 
-            uiPanel1.Controls.Add(ComMutualPerson);
+            uiPanel1.Controls.Add(txtMutualPerson);
             uiPanel1.Controls.Add(btnOK);
             uiPanel1.Controls.Add(uiLabel1);
             uiPanel1.Controls.Add(txtauxiliariesName4);
@@ -102,30 +102,27 @@
             uiPanel1.Text = null;
             uiPanel1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // ComMutualPerson
+            // txtMutualPerson
             // 
-            ComMutualPerson.BackColor = Color.Transparent;
-            ComMutualPerson.DataSource = null;
-            ComMutualPerson.FillColor = Color.FromArgb(43, 46, 57);
-            ComMutualPerson.FillColor2 = Color.FromArgb(43, 46, 57);
-            ComMutualPerson.Font = new Font("思源黑体 CN Bold", 12F, FontStyle.Bold);
-            ComMutualPerson.ForeColor = Color.FromArgb(235, 227, 221);
-            ComMutualPerson.ForeDisableColor = Color.FromArgb(235, 227, 221);
-            ComMutualPerson.ItemHoverColor = Color.FromArgb(155, 200, 255);
-            ComMutualPerson.ItemSelectForeColor = Color.FromArgb(235, 243, 255);
-            ComMutualPerson.Location = new Point(21, 51);
-            ComMutualPerson.Margin = new Padding(4, 5, 4, 5);
-            ComMutualPerson.MinimumSize = new Size(63, 0);
-            ComMutualPerson.Name = "ComMutualPerson";
-            ComMutualPerson.Padding = new Padding(0, 0, 30, 2);
-            ComMutualPerson.RectColor = Color.Silver;
-            ComMutualPerson.RectDisableColor = Color.Silver;
-            ComMutualPerson.Size = new Size(197, 30);
-            ComMutualPerson.SymbolSize = 24;
-            ComMutualPerson.TabIndex = 453;
-            ComMutualPerson.TextAlignment = ContentAlignment.MiddleLeft;
-            ComMutualPerson.Watermark = "请选择";
-            ComMutualPerson.SelectedIndexChanged += ComMutualPerson_SelectedIndexChanged;
+            txtMutualPerson.BackColor = Color.Transparent;
+            txtMutualPerson.FillColor = Color.FromArgb(43, 46, 57);
+            txtMutualPerson.FillColor2 = Color.FromArgb(43, 46, 57);
+            txtMutualPerson.Font = new Font("思源黑体 CN Bold", 12F, FontStyle.Bold);
+            txtMutualPerson.ForeColor = Color.FromArgb(235, 227, 221);
+            txtMutualPerson.ForeDisableColor = Color.FromArgb(235, 227, 221);
+            txtMutualPerson.Location = new Point(21, 51);
+            txtMutualPerson.Margin = new Padding(4, 5, 4, 5);
+            txtMutualPerson.MinimumSize = new Size(63, 0);
+            txtMutualPerson.Name = "txtMutualPerson";
+            txtMutualPerson.Padding = new Padding(0, 0, 30, 2);
+            txtMutualPerson.RectColor = Color.FromArgb(43, 46, 57);
+            txtMutualPerson.RectDisableColor = Color.FromArgb(43, 46, 57);
+            txtMutualPerson.RectReadOnlyColor = Color.FromArgb(43, 46, 57);
+            txtMutualPerson.ShowText = false;
+            txtMutualPerson.Size = new Size(197, 30);
+            txtMutualPerson.TabIndex = 453;
+            txtMutualPerson.TextAlignment = ContentAlignment.MiddleLeft;
+            txtMutualPerson.Watermark = "请输入";
             // 
             // btnOK
             // 
@@ -591,6 +588,6 @@
         private UITextBox txtauxiliariesCode1;
         private UILabel uiLabel8;
         private UIButton btnOK;
-        private UIComboBox ComMutualPerson;
+        private UITextBox txtMutualPerson;
     }
 }

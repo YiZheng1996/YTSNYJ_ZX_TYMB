@@ -420,7 +420,7 @@ namespace MainUI
                     VarHelper.ShowDialogWithOverlay(frm, frmUser);
                     BaseTest.AuxiModel = new();
                     BaseTest.AuxiModel = frmUser.model;
-                    VarHelper.isRedoing = true;
+                    //VarHelper.isRedoing = true;
                 }
                 var (time, voltage) = VarHelper.GetVoltage(BaseTest.NewTask.stepContent);
                 OPCHelper.PUBgrp[2] = time;     //时间
@@ -428,7 +428,6 @@ namespace MainUI
                 OPCHelper.PUBgrp[1] = VarHelper.GetCurrent(BaseTest.NewTask.resultStandard); //电流
                 OPCHelper.PUBgrp[61] = true;  //试验开始
                 taskManager.StartTask("在线试验");
-                return true;
             }
             else
             {
